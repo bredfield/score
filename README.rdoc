@@ -6,3 +6,7 @@
 - Collections - these are folders/categories
 - Stats - things that people are tracking. i.e. calories
 - entries - a specific instance of a stat. For example 10 calories monday at 9am
+
+
+==== Stats
+- Fields
