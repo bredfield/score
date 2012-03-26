@@ -1,6 +1,6 @@
 == Welcome to Score
 
-## Models
+=== Models
 
 - User
 - Collections - these are folders/categories
