@@ -20,5 +20,8 @@ class Stat
   	t = ["distance", "time", "count", "mood", "scale"]
   end
 
+  def self.time_periods
+  	p = ["hour", "day", "week", "month", "year"]
+  end
 
 end

@@ -1,7 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
-  
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -44,10 +44,24 @@ class User
 
   ## Fields
   field :fname
-  field :lname
+  field :name
   field :twitter
+  field :provider
+  field :uid
 
+  attr_accessible :provider, :uid, :name, :email
   ## Relations
   has_many :collections
+  has_many :authentications
 
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth['provider']
+      user.uid = auth['uid']
+      if auth['info']
+         user.name = auth['info']['name'] || ""
+         user.email = auth['info']['email'] || ""
+      end
+    end
+  end
 end
