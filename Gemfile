@@ -8,6 +8,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
+gem 'backbone-support'
+gem 'ejs'
 gem "mongoid", ">= 2.3.0"
 gem 'bson_ext'
 gem "devise"
