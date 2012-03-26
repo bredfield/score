@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Score</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= image_tag "logo.png", id: "logo" %>
+				<a class="brand" href="#">Score</a>
+
+				<ul class="nav pull-right">
+					<li><a href="#">About</a></li>
+					<li><a href="#about">Sign Up</a></li>
+					<li><a href="#contact">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="content" class="container">
+		<div class="row">
+			<div class="sidebar span2">
+				<div class="user">
+					<%= image_tag "user_thumb.png", class: "thumb" %>
+					<h2>Hi, <br><span class="bold">Ben</span></h2>
+					<ul class="icons nav nav-list">
+						<li><a href="#"><i class="icon-exclamation-sign"></i> Notifications</a></li>
+						<li><a href="#"><i class="icon-user"></i> My Account</a></li>
+						<li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+						<li><a href="#"><i class="icon-inbox"></i> Export</a></li>
+					</ul>
+				</div>
+				<ul class="categories">
+					<li>
+						<a href="#"> All <span class="badge">24</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Starred <i class="icon-star"></i><span class="badge">4</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Bodily <span class="badge">3</span></a>
+					</li>
+
+					<li class="active">
+						<a href="#"> Nutrition <span class="badge">8</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Exercise <span class="badge">4</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Time <span class="badge">2</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Location <span class="badge">2</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Finance <span class="badge">5</span></a>
+					</li>
+
+					<li>
+						<a href="#"> Social <span class="badge">3</span></a>
+					</li>
+
+					<li class="add">
+						<a href="#">+ Add Category </a>
+					</li>
+				</ul><!-- .categories -->
+			</div>
+		</div><!-- .sidebar -->
+
+			<div class="main span10 offset2">
+				<div id="tracks" class="row">
+					
+					<div class="track span5">
+						<div class="header blue"> 
+							<span class="title">Sugar Consumed</span>
+						</div>
+						<div class="main span4">
+							<div class="controls">
+
+							</div><!-- .controls -->
+							<div class="values">
+								
+							</div><!-- .values -->
+						</div><!-- .span3 -->
+						<div class="side span1">
+							<ul class="nav nav-list">
+								<li><a href="#">
+									<%= image_tag "icons/data.png" %>
+									Data
+								</a></li>
+									
+								<li><a href="#">
+									<%= image_tag "icons/graph.png" %>
+									Graph
+								</a></li>
+
+								<li><a href="#">
+									<%= image_tag "icons/star.png" %>
+									Star
+								</a></li>
+									
+								<li><a href="#">
+									<%= image_tag "icons/settings.png" %>
+									Options
+								</a></li>
+									
+								<li><a href="#">
+									<%= image_tag "icons/export.png" %>
+									Export
+								</a></li>
+								
+								<li><a href="#">
+									<%= image_tag "icons/delete.png" %>
+									Delete
+								</a></li>
+							</ul>
+						</div><!-- .span3 -->
+					</div><!-- .track -->
+
+					<div class="track span5">
+						<div class="header blue"> 
+							<span class="title">Water Consumed</span>
+						</div>
+						<div class="main span4">
+							<div class="controls">
+								<!-- <div class="input">
+									<span class="num">3:10</span>
+								</div> -->
+							</div><!-- .controls -->
+							<div class="values">
+								
+							</div><!-- .values -->
+						</div><!-- .span3 -->
+						<div class="side span1">
+							<ul class="nav nav-list">
+								<li><a href="#">
+									<img src="img/icons/data.png" />
+									Data
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/graph.png" />
+									Graph
+								</a></li>
+
+								<li><a href="#">
+									<img src="img/icons/star.png" />
+									Star
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/settings.png" />
+									Options
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/export.png" />
+									Export
+								</a></li>
+								
+								<li><a href="#">
+									<img src="img/icons/delete.png" />
+									Delete
+								</a></li>
+							</ul>
+						</div><!-- .span3 -->
+					</div><!-- .track -->
+
+					<div class="track span5">
+						<div class="header blue"> 
+							<span class="title">Alcohol Consumed</span>
+						</div>
+						<div class="main span4">
+							<div class="controls">
+								
+							</div><!-- .controls -->
+							<div class="values">
+								
+							</div><!-- .values -->
+						</div><!-- .span3 -->
+						<div class="side span1">
+							<ul class="nav nav-list">
+								<li><a href="#">
+									<img src="img/icons/data.png" />
+									Data
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/graph.png" />
+									Graph
+								</a></li>
+
+								<li><a href="#">
+									<img src="img/icons/star.png" />
+									Star
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/settings.png" />
+									Options
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/export.png" />
+									Export
+								</a></li>
+								
+								<li><a href="#">
+									<img src="img/icons/delete.png" />
+									Delete
+								</a></li>
+							</ul>
+						</div><!-- .span3 -->
+					</div><!-- .track -->
+
+					<div class="track span5">
+						<div class="header blue"> 
+							<span class="title">Fat Consumed</span>
+						</div>
+						<div class="main span4">
+							<div class="controls">
+								
+							</div><!-- .controls -->
+							<div class="values">
+								
+							</div><!-- .values -->
+						</div><!-- .span3 -->
+						<div class="side span1">
+							<ul class="nav nav-list">
+								<li><a href="#">
+									<img src="img/icons/data.png" />
+									Data
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/graph.png" />
+									Graph
+								</a></li>
+
+								<li><a href="#">
+									<img src="img/icons/star.png" />
+									Star
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/settings.png" />
+									Options
+								</a></li>
+									
+								<li><a href="#">
+									<img src="img/icons/export.png" />
+									Export
+								</a></li>
+								
+								<li><a href="#">
+									<img src="img/icons/delete.png" />
+									Delete
+								</a></li>
+							</ul>
+						</div><!-- .span3 -->
+					</div><!-- .track -->
+				</div><!-- #tracks -->
+			</div><!-- .span10 -->
+		</div><!-- .row -->
+	</div><!-- #content -->
+
+	</div> <!-- /container -->
+</body>
+</html>
