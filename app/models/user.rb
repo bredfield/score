@@ -3,9 +3,9 @@ class User
   include Mongoid::Timestamps
 
   # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable, :validatable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable
 
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""
@@ -43,13 +43,12 @@ class User
   # field :authentication_token, :type => String
 
   ## Fields
-  field :fname
   field :name
-  field :twitter
   field :provider
-  field :uid
+  field :profile
+  field :location
 
-  attr_accessible :provider, :uid, :name, :email
+  attr_accessible :provider, :uid, :name, :email, :profile, :location
   ## Relations
   has_many :collections
   has_many :authentications
@@ -61,6 +60,8 @@ class User
       if auth['info']
          user.name = auth['info']['name'] || ""
          user.email = auth['info']['email'] || ""
+         user.profile = auth['info']['image'] || ""
+         user.location = auth['info']['location'] || ""
       end
     end
   end

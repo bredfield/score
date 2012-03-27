@@ -19,14 +19,17 @@
 
 				<ul class="nav pull-right">
 					<li><a href="#">About</a></li>
-					<li><a href="#about">Sign Up</a></li>
 					<li><a href="#contact">Help</a></li>
+					<li><%= link_to "Sign In", signin_path %></li>
+					<li><%= link_to "Sign Out", signout_path %></li>
+					<li><%= link_to "Edit", edit_user_path(current_user) %></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 	<div id="content" class="container">
+		<%= current_user.name if current_user %>
 		<%= yield %>
 	</div><!-- #content -->
 </body>
