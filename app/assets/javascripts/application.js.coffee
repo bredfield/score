@@ -22,13 +22,11 @@ window.app =
 	routers:{}
 	init:(json)->
 		## UI ##
-		@el = $('#app-view')
-
-		@datas = new @collections.datas();
+		@el = $('#app')
 		## BackBone setup ##
-		# @datas = new @collections.datas(json)
+		@datas = new @collections.stats(json)
 
-		# @appRouter = new @routers.appRouter()
-		# Backbone.history.start()
+		@appRouter = new @routers.appRouter()
+		Backbone.history.start()
 
 app = window.app
