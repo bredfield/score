@@ -3,6 +3,7 @@
 //= require ./require/underscore
 //= require ./require/backbone
 //= require ./require/backbone.authtokenadapter
+//= require ./require/backbone-query.min
 //= require backbone-support
 
 //= require_self
@@ -23,6 +24,7 @@ window.app =
 	init:(json)->
 		## UI ##
 		@el = $('#app')
+
 		## BackBone setup ##
 		@datas = new @collections.stats(json)
 

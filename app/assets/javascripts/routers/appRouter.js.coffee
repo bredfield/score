@@ -1,11 +1,21 @@
 class app.routers.appRouter extends Support.SwappingRouter
 	initialize:->
-		appIndex = new app.views.appIndex
-		app.el.html appIndex.render().el
+
+		sidebar = new app.views.sidebar()
+		app.el.html sidebar.render().el
+	
+		statsIndex = new app.views.statsIndex()
+		app.el.append statsIndex.render().el
+
+		@el = app.el.find('#stats')
+
 
 	routes:
-		"":"app"
+		"":"all"
+
+	all:->
+		stat = new app.views.statItem()
+		console.log stat.render().el
+		@swap(stat)
 
 
-	app:->
-		

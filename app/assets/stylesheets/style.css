@@ -54,7 +54,7 @@ h1,h2,h3{
 
 }
 
-#content{
+#app{
 	padding-top:50px;
 	position:relative;
 	background: -webkit-linear-gradient(#FFF, #FCFCFC);
@@ -67,8 +67,10 @@ h1,h2,h3{
 	position:fixed;
 	border-radius:0;
 	border-top:0;
+	margin-left:0;
 	background:#F0F5F5;
 	height:100%;
+	width:230px;
 	border-right: 1px solid #AFAFAF ;
 
 }
@@ -126,7 +128,6 @@ h1,h2,h3{
 
 .categories li.active{
 	background-image: -webkit-linear-gradient(#ddd 0%, #ccc 100%);
-	/*background-color: rgba(0, 0, 0, 0.2);*/
 }
 
 .categories li:hover{
@@ -159,9 +160,6 @@ h1,h2,h3{
 	font-size:18px;
 }
 
-/*.categories li.active{
-	background-image: -webkit-linear-gradient(#DEE3E3 0%, #B7C5C5 100%);
-}*/
 
 .categories li a i{
 	margin-top:5px;
@@ -189,17 +187,20 @@ h1,h2,h3{
 	border-radius: 5px;
 }
 
-.main.offset2{
+/*.main.offset2{
 	margin-left:230px;
-}
+}*/
 
-#tracks{
+#stats{
 	-webkit-box-shadow:-6px 0 10px rgba(100,100,100,.1);
 	position:relative;
 	min-height:1000px;
+	width:970px;
+	margin-left:230px;
+	background:#fff;
 }
 
-#tracks .track{
+#stats .track{
 	height:350px;
 	-webkit-box-shadow:0 0 1px #333;
 	margin-bottom:30px;
@@ -224,7 +225,7 @@ h1,h2,h3{
 	background:pink;
 }
 
-#tracks .track .header{
+#stats .track .header{
 	width:100%;
 	height:30px;
 	line-height:30px;
@@ -240,12 +241,12 @@ h1,h2,h3{
 	padding-left:10px;
 }
 
-#tracks .track .main{
+#stats .track .main{
 	height:320px;
 	margin:0;padding:0;
 }
 
-.main .controls{
+#stats .controls{
 	width:100%;
 	height:159px;
 	padding-right:30px;
@@ -287,13 +288,13 @@ h1,h2,h3{
 	color:#666;
 }
 
-.main .values{
+#stats .values{
 	width:100%;
 	height:160px;
 
 }
 
-#tracks .track .side{
+#stats .track .side{
 	height:320px;
 	background:#F0F5F5;
 	color:#444;
