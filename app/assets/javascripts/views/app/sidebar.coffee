@@ -4,7 +4,18 @@ class app.views.sidebar extends Support.CompositeView
 	initialize:->
 
 	render:->
-		$(@el).html JST['templates/app/sidebar']
+		@user()
+		@categories()
+		
+		return @
+
+	user:->
+		user = new app.views.userInfo()
+		$(@el).append user.render().el
+
+	categories:->
+		categories = new app.views.categoriesIndex()
+		$(@el).append categories.render().el
 		return @
 
 

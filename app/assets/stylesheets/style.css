@@ -1,5 +1,5 @@
 body{
-	background:#F0F5F5;
+	background:url(http://subtlepatterns.com/patterns/lghtmesh.png) repeat;
 }
 
 h1,h2,h3{
@@ -54,11 +54,10 @@ h1,h2,h3{
 
 }
 
-
 #content{
 	padding-top:50px;
 	position:relative;
-	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), #FAFAFA);
+	background: -webkit-linear-gradient(#FFF, #FCFCFC);
 	padding-right:30px;
 	border: 1px solid #AFAFAF ;
 	-webkit-box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px;
@@ -71,7 +70,7 @@ h1,h2,h3{
 	background:#F0F5F5;
 	height:100%;
 	border-right: 1px solid #AFAFAF ;
-	-webkit-box-shadow: #fff 0px 1px 0px;
+
 }
 
 .sidebar .user{
@@ -191,7 +190,7 @@ h1,h2,h3{
 }
 
 .main.offset2{
-	margin-left:200px;
+	margin-left:230px;
 }
 
 #tracks{
@@ -333,4 +332,15 @@ h1,h2,h3{
 .side .nav li a img{
 	width:19px;
 	opacity:.4;
+}
+
+
+@media (max-width:1024px){
+	#content{
+		padding-right:20px;
+	}
+
+	.main.offset2{
+		margin-left:181px;
+	}
 }

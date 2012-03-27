@@ -2,8 +2,6 @@ class app.views.appIndex extends Support.CompositeView
 	id:"content"
 	className: "container"
 
-	initialize:->
-
 	render:->
 		$(@el).html JST['templates/app/index']
 		@sidebar()
