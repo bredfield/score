@@ -5,6 +5,11 @@ class app.views.categoriesIndex extends Support.CompositeView
 	initialize:->
 
 	render:->
-		$(@el).html JST['templates/categories/index']
+		@parseCategories()
 		return @
 
+	parseCategories:->
+		for i in [1..5]
+			$(@el).append JST['templates/categories/category']
+
+		$(@el).append JST['templates/categories/categoryAdd']

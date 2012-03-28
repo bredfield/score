@@ -4,18 +4,19 @@ class app.routers.appRouter extends Support.SwappingRouter
 		sidebar = new app.views.sidebar()
 		app.el.html sidebar.render().el
 	
-		statsIndex = new app.views.statsIndex()
-		app.el.append statsIndex.render().el
+		app.el.append "<div id='content' />"
 
-		@el = app.el.find('#stats')
+		@el = app.el.find('#content')
 
 
 	routes:
-		"":"all"
+		"":"stats"
+		"category/:id":"stats"
 
-	all:->
-		stat = new app.views.statItem()
-		console.log stat.render().el
-		@swap(stat)
+	stats:(id)->
+		id = 1 if !id
+		console.log id
+		statsIndex = new app.views.statsIndex()
+		@swap(statsIndex)
 
 

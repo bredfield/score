@@ -1,5 +1,5 @@
 class app.views.statItem extends Support.CompositeView
-	className: "track span5"
+	className: "stat span5"
 
 	initialize:->
 
