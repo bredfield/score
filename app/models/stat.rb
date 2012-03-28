@@ -17,11 +17,14 @@ class Stat
   belongs_to :collection
 
   def self.types
-  	t = ["distance", "time", "count", "mood", "scale"]
+  	t = %w[distance time count mood scale]
   end
 
   def self.time_periods
-  	p = ["hour", "day", "week", "month", "year"]
+  	p = %w[hour day week month year]
   end
+
+
+
 
 end
