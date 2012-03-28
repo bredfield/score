@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   		stats: @stats,
   		user: @user
   	}
+  	respond_with(@response)
   end
 
   def about
