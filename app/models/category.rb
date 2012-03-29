@@ -1,4 +1,4 @@
-class Collection
+class Category
   include Mongoid::Document
   include Mongoid::Timestamps
   
@@ -6,7 +6,7 @@ class Collection
   field :name, :type => String
   field :desc, :type => String
 
-  has_many :stats, dependent: :destroy
+  has_many :stats
   belongs_to :user
 
 end

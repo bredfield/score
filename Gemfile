@@ -15,3 +15,4 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem 'aws-sdk'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem "omniauth-facebook"

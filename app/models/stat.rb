@@ -13,7 +13,8 @@ class Stat
   field :t_group # Group by time period (If nil/blank setting is off)
 
   ## Relations
-  embeds_many :entries
+  # embeds_many :entries
+  belongs_to :category
   belongs_to :collection
 
   def self.types
