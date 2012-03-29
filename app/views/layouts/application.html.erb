@@ -18,7 +18,8 @@
 
 				<ul class="nav pull-right">
 					<li><a href="#">About</a></li>
-					<li><a href="#about">Sign Up</a></li>
+					<li><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %></li>
+
 					<li><a href="#contact">Help</a></li>
 				</ul>
 			</div>

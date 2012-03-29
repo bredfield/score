@@ -5,7 +5,7 @@ class User
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :verifiable
 
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""
@@ -51,17 +51,23 @@ class User
 
   attr_accessible :provider, :uid, :name, :email
   ## Relations
-  has_many :collections
-  has_many :authentications
+  has_many :category
+  # def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
+  #   data = access_token.extra.raw_info
+  #   logger.info data
+  #   # if user = User.where(:email => data.email).first
+  #   #   user
+  #   # else # Create a user with a stub password. 
+  #     u = User.create!(:email => data.email, :password => Devise.friendly_token[0,20]) 
+  #     u.save
+  #   #end
+  # end
 
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth['provider']
-      user.uid = auth['uid']
-      if auth['info']
-         user.name = auth['info']['name'] || ""
-         user.email = auth['info']['email'] || ""
-      end
-    end
-  end
+  # def self.new_with_session(params, session)
+  #   super.tap do |user|
+  #     if data = session["devise.twitter_data"] && session["devise.twitter_data"]["extra"]["raw_info"]
+  #       user.email = data["email"]
+  #     end
+  #   end
+  # end
 end
