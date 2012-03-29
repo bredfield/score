@@ -26,7 +26,8 @@ window.app =
 		@el = $('#app')
 
 		## BackBone setup ##
-		@stats = new @collections.stats(json)
+		@stats = new @collections.stats(json.stats)
+		@categories = new @collections.categories(json.collections)
 
 		@appRouter = new @routers.appRouter()
 		Backbone.history.start()

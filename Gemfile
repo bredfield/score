@@ -15,3 +15,5 @@ gem 'bson_ext'
 gem "devise"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem 'aws-sdk'
+gem 'omniauth'
+gem 'omniauth-twitter'

@@ -11,12 +11,19 @@ class app.routers.appRouter extends Support.SwappingRouter
 
 	routes:
 		"":"stats"
+		"category":"stats"
 		"category/:id":"stats"
 
+
 	stats:(id)->
-		id = 1 if !id
-		console.log id
+		window.location.hash = "category/all" if !id
+		
+		if id is "all"
+			console.log "yaa"
+
 		statsIndex = new app.views.statsIndex()
 		@swap(statsIndex)
+
+
 
 

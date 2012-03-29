@@ -13,7 +13,10 @@ class app.views.sidebar extends Support.CompositeView
 		$(@el).append JST['templates/users/user']
 
 	categories:->
-		categories = new app.views.categoriesIndex()
+		
+		categories = new app.views.categoriesIndex
+			collection:app.categories
+
 		$(@el).append categories.render().el
 
 

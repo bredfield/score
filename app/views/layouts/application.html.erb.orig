@@ -25,18 +25,19 @@
 		</div>
 	</div>
 
-
+<<<<<<< HEAD
 	<div id="app" class="container">
-		<%= yield %>
 	</div>
 
 
 
 	<script type="text/javascript">
-		window.app.init(<%== @response.to_json %>);
+		window.app.init();
 	</script>
-
-
-
+=======
+	<div id="content" class="container">
+		<%= yield %>
+	</div><!-- #content -->
+>>>>>>> 20204b4c2aa3e01015e44b7680318abc5d36d349
 </body>
 </html>
