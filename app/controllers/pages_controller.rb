@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   respond_to :html, :json
   def index
-  	@collections = Collection.all
+  	@categories = Category.all
   	@stats = Stat.all
   	@user = current_user
   	@response = {
-  		collections: @collections,
+  		collections: @categories,
   		stats: @stats,
   		user: @user
   	}
