@@ -15,7 +15,7 @@ class Stat
   ## Relations
   # embeds_many :entries
   belongs_to :category
-  belongs_to :collection
+  # belongs_to :collection
 
   def self.types
   	t = %w[distance time count mood scale]

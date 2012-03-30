@@ -8,11 +8,6 @@ class Category
   has_many :stats
   belongs_to :user
 
-  # def as_json(options={})
-  #   attrs = super(options)
-  #   attrs["id"] = self.persisted? ? self._id : nil
-  #   attrs
-  # end
 end
 
 module Mongoid

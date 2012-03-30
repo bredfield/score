@@ -10,9 +10,16 @@ class app.views.categoriesIndex extends Support.CompositeView
 
 	parseCategories:->
 		$(@el).append JST['templates/categories/categoryAll']
+			count:app.stats.length
 
 		@collection.each (cat)=>
-			console.log cat.get('id')
+			
+			count = app.stats.where
+				category_id:cat.id
+
+			count = count.length
+			cat.count = count
+
 			$(@el).append JST['templates/categories/category']
 				category:cat
 

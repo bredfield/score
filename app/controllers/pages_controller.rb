@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   	@stats = Stat.all
   	@user = current_user
   	@response = {
-  		collections: @categories,
+  		categories: @categories,
   		stats: @stats,
   		user: @user
   	}

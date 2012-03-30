@@ -5,5 +5,6 @@ class app.views.statItem extends Support.CompositeView
 
 	render:->
 		$(@el).html JST['templates/stats/stat']
+			stat:@model
 		return @
 
