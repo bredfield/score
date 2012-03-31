@@ -1,3 +1,3 @@
-<li data-role="<%= category.id %>">
+<li oncontextmenu="return false;" data-role="<%= category.id %>">
 	<a  href="#category/<%= category.id %>"> <%= category.escape('name') %> <span class="badge"><%= category.count %></span></a>
 </li>

@@ -12,7 +12,6 @@ class app.views.categoriesIndex extends Support.CompositeView
 
 		_.bindAll(@,"render")
 		@collection.bind("add", @render)
-		@collection.bind("remove", @render)
 
 	render:->
 		@parseCategories()
@@ -36,21 +35,12 @@ class app.views.categoriesIndex extends Support.CompositeView
 		$(@el).append JST['templates/categories/categoryAdd']
 
 	newCategory:()->
-		name = prompt "Category Name:"
-		
-		if name 
-			newCat = new app.models.category
-				name:name
+		newCat = new app.models.category
+			name:prompt "Category Name:"
 
-			newCat.save()
-			@collection.add(newCat)
+		newCat.save()
+		@collection.add(newCat)
 
-	mouse:(e)=>
+	mouse:(e)->
 		if e.which is 3
-			id = $(e.target).closest('li').attr('data-role')
-			category = @collection.get(id)
-
-			really = confirm("You sure 'bout dat, nigga?")
-			if really 
-				category.destroy()
-
+			console.log e.target

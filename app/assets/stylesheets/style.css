@@ -91,13 +91,14 @@ h1,h2,h3{
 	border-bottom: 1px solid #A2AFAF ;
 }
 
-.sidebar .user .thumb{
+.thumb{
 	width:60px;
 	height:60px;
-	margin-right:5px;
+
+	margin:5px;
 	float:left;
 	border:1px solid #fff;
-	margin-bottom:10px;
+	/*margin-bottom:10px;*/
 }
 
 .sidebar .user h2{
