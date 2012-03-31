@@ -147,7 +147,7 @@ h1,h2,h3{
 
 }
 
-.categories li a{
+.categories li a, .categories li.add{
 	display:block;
 	width:100%;
 	height:50px;
@@ -165,11 +165,9 @@ h1,h2,h3{
 }
 
 
-.categories li.add a{
+.categories li.add {
 	text-align:center;
-	padding-left:0px;
-	font-weight:300;
-	font-size:18px;
+	cursor:pointer;
 }
 
 

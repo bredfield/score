@@ -24,9 +24,9 @@ window.app =
 	init:(json)->
 		## UI ##
 		@el = $('#app')
+
 		## BackBone setup ##
 		@stats = new @collections.stats(json.stats)
-
 		@categories = new @collections.categories(json.categories)
 
 		@appRouter = new @routers.appRouter()

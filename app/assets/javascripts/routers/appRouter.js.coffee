@@ -18,6 +18,8 @@ class app.routers.appRouter extends Support.SwappingRouter
 	stats:(id)->
 		window.location.hash = "category/all" if !id
 
+		
+
 		statsIndex = new app.views.statsIndex
 			collection:app.stats
 			category:id
