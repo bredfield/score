@@ -169,6 +169,7 @@ h1,h2,h3{
 .categories li.add {
 	text-align:center;
 	cursor:pointer;
+	padding-left:0;
 }
 
 
@@ -177,6 +178,7 @@ h1,h2,h3{
 	color:#888;
 	opacity:.5;
 }
+
 
 .badge {
 	display:block;

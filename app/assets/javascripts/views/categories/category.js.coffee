@@ -4,8 +4,6 @@ class app.views.categoriesIndex extends Support.CompositeView
 
 	events:
 		'click .add':'newCategory'
-		'mousedown':'mouse'
-
 
 
 	initialize:->
@@ -41,6 +39,3 @@ class app.views.categoriesIndex extends Support.CompositeView
 		newCat.save()
 		@collection.add(newCat)
 
-	mouse:(e)->
-		if e.which is 3
-			console.log e.target

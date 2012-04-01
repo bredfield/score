@@ -4,12 +4,12 @@ class app.views.categoriesIndex extends Support.CompositeView
 
 	events:
 		'click .add':'newCategory'
-		'mousedown':'mouse'
+		'mousedown':'deleteCategory'
 
 
 
 	initialize:->
-
+		@$ = $(@el)
 		_.bindAll(@,"render")
 		@collection.bind("change", @render)
 		@collection.bind("destroy", @render)
@@ -19,7 +19,7 @@ class app.views.categoriesIndex extends Support.CompositeView
 		return @
 
 	parseCategories:->
-		$(@el).html JST['templates/categories/categoryAll']
+		@$.html JST['templates/categories/categoryAll']
 			count:app.stats.length
 
 		@collection.each (cat)=>
@@ -30,10 +30,12 @@ class app.views.categoriesIndex extends Support.CompositeView
 			count = count.length
 			cat.count = count
 
-			$(@el).append JST['templates/categories/category']
+			@$.append JST['templates/categories/category']
 				category:cat
 
-		$(@el).append JST['templates/categories/categoryAdd']
+		@$.append JST['templates/categories/categoryAdd']
+
+
 
 	newCategory:()->
 		name = prompt "Category Name:"
@@ -46,12 +48,13 @@ class app.views.categoriesIndex extends Support.CompositeView
 			@collection.add(newCat)
 			@collection.fetch()
 
-	mouse:(e)=>
+	deleteCategory:(e)->
 		if e.which is 3
 			id = $(e.target).closest('li').attr('data-role')
 			category = @collection.get(id)
 
-			really = confirm("You sure 'bout dat, nigga?")
+			really = confirm("Are you seriously about to delete this category? ")
+			
 			if really 
 				category.destroy()
 

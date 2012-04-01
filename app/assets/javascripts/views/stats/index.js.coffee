@@ -9,15 +9,13 @@ class app.views.statsIndex extends Support.CompositeView
 		@$ = $(@el)
 		
 		_.bindAll(@,"render")
-		@collection.bind("change", @render)
+		@collection.bind("add", @render)
 		@collection.bind("destroy", @render)
 
 		@category = @options.category
 
-
-
 	render:->
-
+		@getCategory()
 		@$.html ""
 		@stats()
 		@highlight()
@@ -25,27 +23,35 @@ class app.views.statsIndex extends Support.CompositeView
 		return @
 
 	getCategory:->
+		## Filter stats based on category
 		if @category != "all"
-			@collection = @collection.where
+			@categories = @collection.where
 				category_id:@category
 
-	stats:->
-		@collection.each (stat)=>
+			## Change badge numbers (for refresh after add/delete)
+			$(".categories li[data-role='#{@category}']").find('.badge').html @categories.length
 
+		else
+			@categories = @collection
+			$(".categories li[data-role='all']").find('.badge').html @collection.length
+
+	stats:->
+		## Filter through stats, create items
+		@categories.each (stat)=>
 			stat = new app.views.statItem
 				model:stat
-
 			@$.append stat.render().el
 
+		## Add 'add' button to end
 		@$.append "<div class='btn add'>Add Stat</div>"
 
 	highlight:->
+		## Change 'active' category
 		$('.categories li').removeClass 'active'
 		$('.categories').find("li[data-role='#{@category}']").addClass 'active'
 
 
 	add:(e)->
-		console.log e
 		e.preventDefault()
 		name = prompt "Stat Name:"
 
@@ -54,9 +60,10 @@ class app.views.statsIndex extends Support.CompositeView
 				name:name
 				category_id:@category
 
-			console.log @collection
 			newStat.save()
 			@collection.add(newStat)
+
+
 
 
 
