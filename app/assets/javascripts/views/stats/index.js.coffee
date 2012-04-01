@@ -43,7 +43,7 @@ class app.views.statsIndex extends Support.CompositeView
 			@$.append stat.render().el
 
 		## Add 'add' button to end
-		@$.append "<div class='btn add'>Add Stat</div>"
+		@$.append '<div class="stat span5 add">+</div>'
 
 	highlight:->
 		## Change 'active' category

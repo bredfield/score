@@ -57,7 +57,7 @@ h1,h2,h3{
 #app{
 	padding-top:50px;
 	position:relative;
-	background: -webkit-linear-gradient(#FFF, #FCFCFC);
+	/*background: -webkit-linear-gradient(#FFF, #FCFCFC);*/
 	padding-right:30px;
 	border: 1px solid #AFAFAF ;
 	
@@ -195,7 +195,7 @@ h1,h2,h3{
 	font-weight:400;
 	border:1px solid #fff;
 	color: #ffffff;
-	-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,.3);
+	-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,.3);
 	background-color: #6DADFC;
 	border-radius: 5px;
 }
@@ -205,7 +205,7 @@ h1,h2,h3{
 }*/
 
 #stats{
-	-webkit-box-shadow:-6px 0 10px rgba(100,100,100,.1);
+	/*-webkit-box-shadow:-6px 0 10px rgba(100,100,100,.1);*/
 	position:relative;
 	min-height:1000px;
 	background:#fff;
@@ -213,11 +213,22 @@ h1,h2,h3{
 
 #stats .stat{
 	height:350px;
-	-webkit-box-shadow:0 0 1px #333;
+	/*-webkit-box-shadow:0 0 1px #333;*/
+	border:1px solid #ddd;
+	border-top:#fff;
 	margin-bottom:30px;
 	margin-top:20px;
-	background:#fff;
+	background:#fcfcfc;
 	position:relative;
+}
+
+#stats .stat.add{
+	font-size:80px;
+	line-height:350px;
+	text-align:center;
+	border-top:1px solid #ddd;
+	color:#FC746D;
+	cursor:pointer;
 }
 
 .stat .header.orange{
@@ -306,7 +317,7 @@ h1,h2,h3{
 }
 
 #stats .stat .side{
-	height:320px;
+	height:319px;
 	background:#F0F5F5;
 	color:#444;
 	-webkit-box-shadow:inset 2px 0 6px rgba(0,0,0,.2);
