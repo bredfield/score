@@ -3,13 +3,16 @@ class StatsController < ApplicationController
 
   def index
   	@stats = Stat.all
-	  respond_with(@stats)
+	  respond_with @stats
   end
 
   def show
   end
 
-  def edit
+  def update
+    @stat = Stat.find(params[:id])
+    @stat.update_attributes(params[:stat])
+    respond_with @stat
   end
 
   def create

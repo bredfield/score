@@ -4,6 +4,7 @@ class app.views.statsIndex extends Support.CompositeView
 
 	events:
 		"click .add":"add"
+		"click a":"prevent"
 
 	initialize:->
 		@$ = $(@el)
@@ -15,6 +16,7 @@ class app.views.statsIndex extends Support.CompositeView
 		@category = @options.category
 
 	render:->
+
 		@getCategory()
 		@$.html ""
 		@stats()
@@ -37,10 +39,12 @@ class app.views.statsIndex extends Support.CompositeView
 
 	stats:->
 		## Filter through stats, create items
-		@categories.each (stat)=>
+		@categories.each (stat,i)=>
+
 			stat = new app.views.statItem
 				model:stat
-			@$.append stat.render().el
+			@renderChild(stat)
+			@$.append stat.el
 
 		## Add 'add' button to end
 		@$.append '<div class="stat span5 add">+</div>'
@@ -52,7 +56,7 @@ class app.views.statsIndex extends Support.CompositeView
 
 
 	add:(e)->
-		e.preventDefault()
+		# e.preventDefault()
 		name = prompt "Stat Name:"
 
 		if name 
@@ -62,6 +66,9 @@ class app.views.statsIndex extends Support.CompositeView
 
 			newStat.save()
 			@collection.add(newStat)
+
+	prevent:(e)->
+		e.preventDefault()
 
 
 
