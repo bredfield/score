@@ -11,8 +11,8 @@ class app.views.categoriesIndex extends Support.CompositeView
 	initialize:->
 
 		_.bindAll(@,"render")
-		@collection.bind("add", @render)
-		@collection.bind("remove", @render)
+		@collection.bind("change", @render)
+		@collection.bind("destroy", @render)
 
 	render:->
 		@parseCategories()
@@ -44,6 +44,7 @@ class app.views.categoriesIndex extends Support.CompositeView
 
 			newCat.save()
 			@collection.add(newCat)
+			@collection.fetch()
 
 	mouse:(e)=>
 		if e.which is 3
