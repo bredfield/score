@@ -111,7 +111,7 @@ a:hover {
   text-decoration: underline;
 }
 .row {
-  margin-left: -20px;
+  margin-left: -40px;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -123,78 +123,76 @@ a:hover {
 }
 [class*="span"] {
   float: left;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .span1 {
-  width: 67px;
+  width: 88px;
 }
 .span2 {
-  width: 154px;
+  width: 216px;
 }
 .span3 {
-  width: 241px;
+  width: 344px;
 }
 .span4 {
-  width: 328px;
+  width: 472px;
 }
 .span5 {
-  width: 415px;
+  width: 600px;
 }
 
 .span6 {
-  width: 502px;
+  width: 728px;
 }
 .span7 {
-  width: 589px;
+  width: 856px;
 }
 .span8 {
-  width: 676px;
+  width: 984px;
 }
 .span9 {
-  width: 763px;
+  width: 1112px;
 }
 .span10 {
-  width: 850px;
+  width: 1240px;
 }
-.span11 {
-  width: 937px;
-}
-.span12 {
-  width: 1024px;
-}
+
 .offset1 {
-  margin-left: 100px;
+  margin-left: 62px;
 }
 .offset2 {
-  margin-left: 180px;
+  margin-left: 124px;
 }
 .offset3 {
-  margin-left: 260px;
+  margin-left: 186px;
 }
 .offset4 {
-  margin-left: 340px;
+  margin-left: 248px;
 }
 .offset5 {
-  margin-left: 420px;
+  margin-left: 310px;
 }
+
 .offset6 {
-  margin-left: 500px;
+  margin-left: 372px;
 }
 .offset7 {
-  margin-left: 580px;
+  margin-left: 434px;
 }
 .offset8 {
-  margin-left: 660px;
+  margin-left: 496px;
 }
 .offset9 {
-  margin-left: 740px;
+  margin-left: 558px;
 }
 .offset10 {
-  margin-left: 820px;
+  margin-left: 620px;
 }
 .offset11 {
-  margin-left: 900px;
+  margin-left: 682px;
 }
+
+
 .row-fluid {
   width: 100%;
   *zoom: 1;

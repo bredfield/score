@@ -18,7 +18,7 @@ class app.views.statsIndex extends Support.CompositeView
 	render:->
 
 		@getCategory()
-		@$.html JST['templates/stats/header']
+		@$.html ''
 		@stats()
 		@highlight()
 

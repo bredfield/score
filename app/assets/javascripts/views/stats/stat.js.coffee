@@ -1,5 +1,5 @@
 class app.views.statItem extends Support.CompositeView
-	className: "stat span5"
+	className: "stat span4"
 
 	events:
 		"click a.delete":"delete"

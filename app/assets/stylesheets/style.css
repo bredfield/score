@@ -55,40 +55,45 @@ h1,h2,h3{
 }
 
 #app{
-	padding-top:50px;
+	/*padding-top:50px;*/
 	position:relative;
 	/*background: -webkit-linear-gradient(#FFF, #FCFCFC);*/
-	padding-right:30px;
-	border: 1px solid #AFAFAF ;
-	
+	/*border: 1px solid #AFAFAF ;*/
+	width: auto;
 }
 
 
 	#content{
-		border-right:1px solid #aaa;
-		width:870px;
-		margin-left:251px;
+		/*border-right:1px solid #aaa;*/
+		margin-left:256px;
 	}
 
-	.main.offset2{
+/*	.main.offset2{
 		margin-left:181px;
-	}
+	}*/
 
 .sidebar{
 	position:fixed;
 	border-radius:0;
 	border-top:0;
 	margin-left:0;
-	background:#F0F5F5;
+	background:#555;
+	color:#fff;
 	height:100%;
-	width:230px;
-	border-right: 1px solid #AFAFAF ;
+	/*width:280px;*/
+	/*border-right: 1px solid #AFAFAF ;*/
 
+}
+
+.sidebar .branding{
+	padding-left:10px;
+	height:50px;
+	background:pink;
 }
 
 .sidebar .user{
 	padding:10px;
-	border-bottom: 1px solid #A2AFAF ;
+	/*border-bottom: 1px solid #A2AFAF ;*/
 }
 
 .thumb{
@@ -97,7 +102,7 @@ h1,h2,h3{
 
 	margin:5px;
 	float:left;
-	border:1px solid #fff;
+	/*border:1px solid #fff;*/
 	/*margin-bottom:10px;*/
 }
 
@@ -129,7 +134,7 @@ h1,h2,h3{
 	list-style:none;
 	margin-left:0;
 	margin-top:10px;
-	border-top:1px solid #aaa;
+	/*border-top:1px solid #aaa;*/
 }
 
 .categories li{
@@ -143,7 +148,7 @@ h1,h2,h3{
 	background-image: -webkit-linear-gradient(#ddd 0%, #ccc 100%);
 }
 
-.categories li:hover{
+.categories li:hover, li{
 	background-color: #e8e8e8;
 
 }
@@ -205,18 +210,24 @@ h1,h2,h3{
 }*/
 
 #stats{
-	/*-webkit-box-shadow:-6px 0 10px rgba(100,100,100,.1);*/
 	position:relative;
 	min-height:1000px;
 	background:#fff;
+}
 
+.header{
+	height:50px;
+	width:600px;
+	background:#000;
+	/*position:fixed;*/
+	/*top:0;*/
 }
 
 
 #stats .stat{
 	height:350px;
 	/*-webkit-box-shadow:0 0 1px #333;*/
-	border:1px solid #ccc;
+	/*border:1px solid #ccc;*/
 	border-top:#fff;
 	margin-bottom:30px;
 	margin-top:20px;
@@ -228,7 +239,7 @@ h1,h2,h3{
 	font-size:80px;
 	line-height:350px;
 	text-align:center;
-	border-top:1px solid #ddd;
+	/*border-top:1px solid #ddd;*/
 	color:#FC746D;
 	cursor:pointer;
 }
@@ -345,7 +356,7 @@ h1,h2,h3{
 
 .side .nav li a{
 	text-shadow:none;
-	color:#666;
+	color:#666;				
 	
 }
 
