@@ -22,7 +22,7 @@ class app.views.statsIndex extends Support.CompositeView
 		@stats()
 		@highlight()
 
-		return @
+		return @ 
 
 	getCategory:->
 		## Filter stats based on category

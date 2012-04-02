@@ -1,5 +1,5 @@
 class app.views.header extends Support.CompositeView
-	className: "stats-header span8"
+	className: "stats-header row"
 
 	initialize:->
 		@$ = $(@el)
