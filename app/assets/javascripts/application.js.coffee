@@ -32,4 +32,10 @@ window.app =
 		@appRouter = new @routers.appRouter()
 		Backbone.history.start()
 
+		preload ['assets/icons/star.png','assets/icons/star_d.png','assets/icons/delete.png']
+
 app = window.app
+
+preload = (imgs)->
+  $(imgs).each ()->
+      $('<img/>')[0].src = @

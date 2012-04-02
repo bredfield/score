@@ -7,11 +7,11 @@ class app.views.statItem extends Support.CompositeView
 
 	initialize:->
 		_.bindAll(@,"render")
-		@model.bind("change", @render)
+		# @model.bind("change", @render)
+
 
 	render:->
-		starred = @model.attributes.starred
-		console.log starred
+		## change star color based on starred
 		if @model.attributes.starred is true
 			starUrl = 'assets/icons/star_d.png'
 		else
@@ -24,18 +24,24 @@ class app.views.statItem extends Support.CompositeView
 
 	toggleStarred:()->
 		stat = @model
-		starred = stat.attributes.starred
 		
-		if starred is true
+		## if the stat is starred, then set value & change img src
+		if @model.attributes.starred is true
 			stat.set 
 				"starred":false
+			$("img[data-role='#{stat.id}']").attr 'src','assets/icons/star.png'
 		else
 			stat.set 
 				"starred":true
+			$("img[data-role='#{stat.id}']").attr 'src','assets/icons/star_d.png'
 
 		stat.save()
 
 	delete:(e)->
 		e.preventDefault()
-		@model.destroy()
+
+		really = confirm("Are you seriously about to delete this stat? ")
+
+		if really 
+			@model.destroy()
 
