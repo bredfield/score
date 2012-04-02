@@ -11,7 +11,7 @@ class app.routers.appRouter extends Support.SwappingRouter
 		@el = app.el.find('#content')
 
 		header = new app.views.header()
-		@el.append header.render().el
+		app.el.append header.render().el
 
 
 

@@ -18,7 +18,7 @@ class app.views.statsIndex extends Support.CompositeView
 	render:->
 
 		@getCategory()
-		@$.html ''
+		@$.html '<div class="spacer"></div>'
 		@stats()
 		@highlight()
 
@@ -47,7 +47,7 @@ class app.views.statsIndex extends Support.CompositeView
 			@$.append stat.el
 
 		## Add 'add' button to end
-		@$.append '<div class="stat span5 add">+</div>'
+		@$.append '<div class="stat span4 add">+</div>'
 
 	highlight:->
 		## Change 'active' category

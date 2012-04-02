@@ -1,5 +1,4 @@
 body{
-	background:url(http://subtlepatterns.com/patterns/lghtmesh.png) repeat;
 }
 
 h1,h2,h3{
@@ -19,6 +18,7 @@ h1,h2,h3{
 .navbar{
 	font-family:"Lato";
 	font-size:20px;
+	z-index:-1;
 }
 
 .navbar .brand{
@@ -68,30 +68,36 @@ h1,h2,h3{
 		margin-left:256px;
 	}
 
-/*	.main.offset2{
-		margin-left:181px;
-	}*/
 
 .sidebar{
 	position:fixed;
 	border-radius:0;
 	border-top:0;
 	margin-left:0;
-	background:#555;
+	background:#eee;
 	color:#fff;
 	height:100%;
-	/*width:280px;*/
-	/*border-right: 1px solid #AFAFAF ;*/
+	z-index:5;
 
 }
 
 .sidebar .branding{
 	padding-left:10px;
 	height:50px;
-	background:pink;
+	background:#444;
+	color:#fff;
+	margin-bottom:20px;
+
+}
+
+.branding h1{
+	color:#fff;
+	line-height:50px;
+	font-family:"Lato";
 }
 
 .sidebar .user{
+
 	padding:10px;
 	/*border-bottom: 1px solid #A2AFAF ;*/
 }
@@ -211,16 +217,22 @@ h1,h2,h3{
 
 #stats{
 	position:relative;
-	min-height:1000px;
+	/*min-height:1000px;*/
 	background:#fff;
 }
 
-.header{
+.stats-header{
 	height:50px;
-	width:600px;
-	background:#000;
-	/*position:fixed;*/
-	/*top:0;*/
+	width:100%;
+	margin-left:0;
+	background:#555;
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+#stats .spacer{
+	height:50px;
 }
 
 
