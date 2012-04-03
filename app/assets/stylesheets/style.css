@@ -82,8 +82,8 @@ h1,h2,h3{
 }
 
 .sidebar .branding{
-	padding-left:10px;
-	height:48px;
+	/*padding-left:10px;*/
+	height:88px;
 	background:#555;
 	color:#fff;
 	border-top:1px solid #ccc;
@@ -99,9 +99,9 @@ h1,h2,h3{
 }
 
 .branding img{
-	height:45px;
-	margin-top:2px;
-	margin-left:10px;
+	height:65px;
+	margin-top:10px;
+	margin-left:0px;
 }
 
 .user{
