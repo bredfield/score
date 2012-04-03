@@ -55,18 +55,15 @@ h1,h2,h3{
 }
 
 #app{
-	/*padding-top:50px;*/
 	position:relative;
-	/*background: -webkit-linear-gradient(#FFF, #FCFCFC);*/
-	/*border: 1px solid #AFAFAF ;*/
 	width: auto;
+	background: #eeeeee;
 }
 
 
-	#content{
-		/*border-right:1px solid #aaa;*/
-		margin-left:256px;
-	}
+#content{
+	margin-left:257px;
+}
 
 
 .sidebar{
@@ -74,22 +71,18 @@ h1,h2,h3{
 	border-radius:0;
 	border-top:0;
 	margin-left:0;
-	background:url(http://subtlepatterns.com/patterns/rubber_grip.png) repeat;
+	background:#bbbbbb;
 	color:#fff;
 	height:100%;
 	z-index:5;
-
+	border-right: 1px solid #888888;
 }
 
 .sidebar .branding{
-	/*padding-left:10px;*/
-	height:88px;
-	background:#555;
+	background:#cccccc;
 	color:#fff;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #333;
-	/*margin-bottom:20px;*/
-
+	border-top:1px solid #eeeeee;
+	border-bottom: 1px solid #aaaaaa;
 }
 
 .branding h1{
@@ -99,35 +92,36 @@ h1,h2,h3{
 }
 
 .branding img{
-	height:65px;
-	margin-top:10px;
-	margin-left:0px;
+	display: block;
+	width:165px;
+	margin: 10px auto;
 }
 
 .user{
-	/*background:#777;*/
-	padding:20px 10px;
-	color:#fff;
-	border-bottom: 1px solid #999 ;
-	border-top:1px solid #888;
+	background: #cccccc;
+	border-top:1px solid #eeeeee;
+	border-bottom: 1px solid #aaaaaa;
 }
 
 .thumb{
 	width:60px;
 	height:60px;
-
 	margin:5px;
 	float:left;
-	/*border:1px solid #fff;*/
-	/*margin-bottom:10px;*/
 }
 
-.sidebar .user h2{
+.sidebar-welcome{
 	font-family:'Droid Sans';
 	font-weight:300;
 	color:#fff;
 	font-size:24px;
 	text-shadow:0 1px 2px #000;
+	float: left;
+	line-height: 28px;
+	padding-top: 5px;
+}
+.sidebar-welcome .bold {
+	display: block;
 }
 
 .user .icons{
@@ -146,45 +140,50 @@ h1,h2,h3{
 	color:red;
 }
 
-
-
 .sidebar .categories{
 	list-style:none;
 	margin-left:0;
-	-webkit-box-shadow:-2px 5px 10px rgba(0,0,0,.2);
-	/*margin-top:10px;*/
-	/*border-top:1px solid #aaa;*/
 }
 
 .categories li{
 	padding-left:5px;
 	-webkit-box-shadow: rgb(100, 100, 100) 0px 0px 0px 0px;
-	border-top:1px solid #333;
-	border-bottom: 1px solid #777 ;
 	position:relative;
-	background: #525050;
+	background: #cccccc;
+	border-top:1px solid #eeeeee;
+	border-bottom: 1px solid #aaaaaa;
 }
 
 .categories li:hover{
-	background: #555;
+	background: #bbbbbb;
+	border-top:1px solid #dddddd;
+	border-bottom: 1px solid #888888;
 }
 
 .categories li.active{
-	background-image: -webkit-linear-gradient(#777 0%, #666 100%);
+	background: #bbbbbb;
+	border-top:1px solid #dddddd;
+	border-bottom: 1px solid #888888;
 }
 
 .categories li a, .categories li.add{
 	display:block;
 	width:100%;
-	height:50px;
+	height:40px;
 	text-align:left;
-	line-height:55px;
+	line-height:40px;
 	font-family:'Lato';
 	font-weight:200;
-	font-size:20px;
-	color:#fff;
-	text-shadow:0 1px 2px #000;
+	font-size:15px;
+	color:#555555;
+	font-weight: bold;
+	text-shadow:0 1px 0px #ffffff;
 	/*border-bottom:1px solid #222;*/
+}
+
+.categories li.active a,
+.categories li:hover a {
+	color: #222222;
 }
 
 .categories li a:hover, .badge:hover{
@@ -212,7 +211,7 @@ h1,h2,h3{
 	width:30px;
 	height:20px;
 	position:absolute;
-	right:10px;top:35%;
+	right:10px;top:23%;
 	text-align:center;
 	line-height:20px;
 	font-size: 13.025px;
@@ -233,8 +232,8 @@ h1,h2,h3{
 
 #stats{
 	position:relative;
-	/*min-height:1000px;*/
-	background:#fff;
+	border-left: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
 }
 
 .stats-header{
@@ -243,10 +242,9 @@ h1,h2,h3{
 	width:100%;
 	margin-left:0;
 	color:#333;
-	/*-webkit-box-shadow:0 4px 15px rgba(0,0,0,.2);*/
-	/*border-bottom:1px solid #ccc;*/
-	/*border-top:1px solid #ccc;*/
-	background:#eee;
+	background:#f5f5f5;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #dddddd;
 	position:fixed;
 	top:0;
 	left:0;
@@ -271,11 +269,11 @@ h1,h2,h3{
 
 
 #stats .stat{
-	height:350px;
-	/*-webkit-box-shadow:0 0 1px #333;*/
-
+	height:360px;
 	border:1px solid #ccc;
-
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
 	margin-bottom:30px;
 	margin-top:20px;
 	background:#fcfcfc;
@@ -301,6 +299,10 @@ h1,h2,h3{
 
 .stat .header.blue{
 	background: #FC746D;
+	box-shadow: 0 -1px 0 #FCB4B0;
+	-moz-box-shadow: 0 -1px 0 #FCB4B0;
+	-webkit-box-shadow: 0 -1px 0 #FCB4B0;
+	border: 1px solid #FC3C32;
 }
 
 .stat .header.pink{
@@ -308,9 +310,10 @@ h1,h2,h3{
 }
 
 #stats .stat .header{
-	width:100%;
-	height:30px;
-	line-height:30px;
+	padding: 10px 0;
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
 	color:#fff;
 	font-size:22px;
 	text-shadow:0 1px 1px #333;
