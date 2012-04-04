@@ -4,6 +4,7 @@ class app.views.statItem extends Support.CompositeView
 	events:
 		"click a.delete":"delete"
 		"click a.star":"toggleStarred"
+		"click a.options":"optionsPop"
 
 	initialize:->
 		_.bindAll(@,"render")
@@ -36,6 +37,14 @@ class app.views.statItem extends Support.CompositeView
 			$("img[data-role='#{stat.id}']").attr 'src','assets/icons/star_d.png'
 
 		stat.save()
+
+	optionsPop:()->
+		options = new app.views.optionsPop
+			model:@model
+
+		@renderChild(options)
+
+		$(@el).append options.el
 
 	delete:(e)->
 		e.preventDefault()

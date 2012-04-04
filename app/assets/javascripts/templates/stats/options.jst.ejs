@@ -1,0 +1,12 @@
+<h4> Stat Options <%= stat.escape('name') %></h4>
+<select id="stat_category">
+<% for(var i=0;i<categories.length;i++){ %>
+	<option value="<%= categories.models[i].id %>"><%= categories.models[i].escape('name') %></option>
+<% } %>
+</select>
+<form>
+	Stat Name: <input type="text" id="stat_name" /><br />
+	Stat Unit: <input type="text" />
+</form>	
+<div class="save btn">Save</div>
+<div class="cancel btn">Cancel</div>

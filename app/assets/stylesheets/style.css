@@ -420,7 +420,13 @@ h1,h2,h3{
 	opacity:.4;
 }
 
-
+.stat .pop{
+	height:320px;
+	position:relative;
+	top:-320px;
+	background:#fcfcfc;
+	margin-left:0;
+}
 
 
 

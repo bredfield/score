@@ -12,6 +12,7 @@ class app.views.statsIndex extends Support.CompositeView
 		_.bindAll(@,"render")
 		@collection.bind("add", @render)
 		@collection.bind("destroy", @render)
+		@collection.bind("change", @render)
 
 		@category = @options.category
 
