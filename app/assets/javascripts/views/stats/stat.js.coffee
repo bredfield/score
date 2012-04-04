@@ -5,6 +5,8 @@ class app.views.statItem extends Support.CompositeView
 		"click a.delete":"delete"
 		"click a.star":"toggleStarred"
 		"click a.options":"optionsPop"
+		"click li.button.plus":"add"
+		"click li.button.minus":"minus"
 
 	initialize:->
 		_.bindAll(@,"render")
@@ -53,4 +55,15 @@ class app.views.statItem extends Support.CompositeView
 
 		if really 
 			@model.destroy()
+
+	add:()->
+		node = $(@el).find('.number')
+		number = parseInt(node.html())
+		node.html( number+1)
+
+	minus:()->
+		node = $(@el).find('.number')
+		number = parseInt(node.html())
+		node.html( number-1)
+
 
