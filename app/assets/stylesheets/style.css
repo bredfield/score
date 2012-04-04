@@ -289,13 +289,6 @@ h1,h2,h3{
 	cursor:pointer;
 }
 
-.stat .header.orange{
-	background:#FEB062;
-}
-
-.stat .header.green{
-	background:#BCDA84;
-}
 
 .stat .header.blue{
 	background: #FC746D;
@@ -305,9 +298,6 @@ h1,h2,h3{
 	border: 1px solid #FC3C32;
 }
 
-.stat .header.pink{
-	background:pink;
-}
 
 #stats .stat .header{
 	padding: 10px 0;
@@ -336,94 +326,62 @@ h1,h2,h3{
 	margin:0;padding:0;
 }
 
+.main .controls, 
+.main .values{
+	width:50%;
+	float:left;
+	height:260px;
+}
+
 #stats .controls{
-	width:100%;
-	height:159px;
-	padding-right:30px;
-	border-bottom:1px solid #ccc;
-	-webkit-box-shadow:0 1px 1px #fff;
-}
-
-.controls .input{
-	line-height:130px;
-	font-size:80px;
-	text-align:center;
-}
-
-.controls .input span{
-
-}
-
-.input span{
-	color:#999;
-	padding: 0 20px;
-}
-
-
-.input .num{
-	background:#fbfbfb;
-	color:#333;
-
-	border-radius:10px;
-	text-shadow:0 0 2px rgba(0,0,0,.4);
-	font-family:"Lato";
-	font-weight:100;
-	border:1px solid #ccc;
-}
-
-.controls .unit{
-	font-size:20px;
-	text-align:center;
-	margin-left:-15px;
-	color:#666;
+	margin-left:0;
+	background:#fcfcfc;
 }
 
 #stats .values{
+	background:#fafafa;
+	-webkit-box-shadow: -0px 0 1px #000;
+}
+
+#stats .menu{
+	display:block;
+	float:left;
+	padding-top:10px;
+	margin-left:0;
+	-webkit-box-shadow:inset 0px 5px 10px rgba(0,0,0,.1);
+	background:#f6f6f6;
+	height:50px;
 	width:100%;
-	height:160px;
-
 }
 
-#stats .stat .side{
-	height:319px;
-	background:#F0F5F5;
-	color:#444;
-	-webkit-box-shadow:inset 2px 0 6px rgba(0,0,0,.2);
-}
-
-.side .nav li{
-	height:48px;
-	padding-top:5px;
+.menu li{
+	float:left;
+	/*line-height:60px;*/
+	padding:0 30px;
 	text-align:center;
-	border-bottom:1px solid #ccc;
-	-webkit-box-shadow:0px 1px 1px #fff;
+	list-style:none;
+	border-right:1px solid #ccc;
 }
 
-.side .nav li:hover img,a{
-	opacity:1;
-	color:#333;
+.menu li a,
+.menu li a:hover{
+	color:#555;
+	text-decoration:none;
 }
 
-.side .nav li:last-child{
-	border-bottom:none;
-	-webkit-box-shadow:none;
+.menu li img{
+	opacity:.3;
+	height:25px;
 }
 
-.side .nav li a{
-	text-shadow:none;
-	color:#666;				
-	
+.menu li.detail{
+	padding:0px 60px;
 }
 
-.side .nav li a:hover{
-	background:none;
+.menu li.delete{
+	border:none;
 }
 
-
-.side .nav li a img{
-	width:19px;
-	opacity:.4;
-}
 
 .stat .pop{
 	height:320px;

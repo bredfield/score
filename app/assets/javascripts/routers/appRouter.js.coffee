@@ -17,7 +17,6 @@ class app.routers.appRouter extends Support.SwappingRouter
 		"":"statsIndex"
 		"category":"statsIndex"
 		"category/:id":"statsIndex"
-		"stat":"statDetail"
 		"stat/:id":"statDetail"
 
 
@@ -31,8 +30,6 @@ class app.routers.appRouter extends Support.SwappingRouter
 		@swap(statsIndex)
 
 	statDetail:(id)->
-		# window.location.hash = "category/all" if !id
-
 		detailIndex = new app.views.detailIndex
 			collection:app.stats
 			category:id

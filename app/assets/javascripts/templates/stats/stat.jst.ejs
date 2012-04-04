@@ -10,15 +10,50 @@
 	</span>
 </div>
 
-<div class="main span3">
+<div class="main">
 	<div class="controls">
-
+		Controls
 	</div><!-- .controls -->
 	<div class="values">
-		
+		Values
 	</div><!-- .values -->
+	<ul class="menu">
+
+			<li class="detail">
+				<a class="detail" href="#stat/<%= stat.id %>">
+					<img src="assets/icons/data.png" />
+					<br />Detail
+				</a>
+			</li>
+
+			<li>
+				<a class="star" href="#">
+					<img data-role="<%= stat.id %>" src="<%= star %>" />
+					<br />Starred
+				</a>
+			</li>
+
+			<li class="">
+				<a class="options" href="#">
+					<img src="assets/icons/settings.png" />
+					<br />Options
+				</a>
+			</li>
+
+			<li class="delete">
+				<a class="delete" href="#">
+					<img src="assets/icons/delete.png" />
+					<br />Delete
+				</a>
+			</li>
+
+
+
+	</ul>
 </div><!-- .span3 -->
-<div class="side span1">
+<!-- <div class="clearfix"></div> -->
+
+<!-- <div class="side span1">
 	<ul class="nav nav-list">
 		<li><a class="detail" href="#stat/<%= stat.id %>">
 			<img src="assets/icons/data.png" />
@@ -50,5 +85,5 @@
 			<br />Delete
 		</a></li>
 	</ul>
-</div><!-- .span3 -->
+</div> --><!-- .span3 -->
 
