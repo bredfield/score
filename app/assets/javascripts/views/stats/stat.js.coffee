@@ -20,6 +20,7 @@ class app.views.statItem extends Support.CompositeView
 
 		$(@el).html JST['templates/stats/stat']
 			stat:@model
+			category:@options.category
 			star:starUrl
 		return @
 
@@ -47,7 +48,6 @@ class app.views.statItem extends Support.CompositeView
 		$(@el).append options.el
 
 	delete:(e)->
-		e.preventDefault()
 
 		really = confirm("Are you seriously about to delete this stat? ")
 

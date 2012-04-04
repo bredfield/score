@@ -326,6 +326,11 @@ h1,h2,h3{
 	padding-left:10px;
 }
 
+.stat .header .category{
+	padding-left:10px;
+	font-weight:100;
+}
+
 #stats .stat .main{
 	height:320px;
 	margin:0;padding:0;

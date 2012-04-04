@@ -6,8 +6,6 @@ class app.routers.appRouter extends Support.SwappingRouter
 	
 		app.el.append "<div id='content' />"
 
-
-
 		@el = app.el.find('#content')
 
 		header = new app.views.header()
@@ -15,15 +13,15 @@ class app.routers.appRouter extends Support.SwappingRouter
 
 
 
-
-
 	routes:
-		"":"stats"
-		"category":"stats"
-		"category/:id":"stats"
+		"":"statsIndex"
+		"category":"statsIndex"
+		"category/:id":"statsIndex"
+		"stat":"statDetail"
+		"stat/:id":"statDetail"
 
 
-	stats:(id)->
+	statsIndex:(id)->
 		window.location.hash = "category/all" if !id
 
 		statsIndex = new app.views.statsIndex
@@ -31,6 +29,17 @@ class app.routers.appRouter extends Support.SwappingRouter
 			category:id
 
 		@swap(statsIndex)
+
+	statDetail:(id)->
+		# window.location.hash = "category/all" if !id
+
+		detailIndex = new app.views.detailIndex
+			collection:app.stats
+			category:id
+
+		@swap(detailIndex)
+
+
 
 
 

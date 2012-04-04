@@ -1,46 +1,54 @@
 
-						<div class="header blue"> 
-							<span class="title"><%= stat.escape('name') %></span>
-						</div>
-						<div class="main span3">
-							<div class="controls">
+<div class="header blue"> 
+	<span class="title">
+		<%= stat.escape('name') %> 
+		<% if(category){ %>
+			<span class="category">
+				(<%= category.escape('name') %>)
+			</span>
+		<% } %>
+	</span>
+</div>
 
-							</div><!-- .controls -->
-							<div class="values">
-								
-							</div><!-- .values -->
-						</div><!-- .span3 -->
-						<div class="side span1">
-							<ul class="nav nav-list">
-								<li><a href="#">
-									<img src="assets/icons/data.png" />
-									<br />Data
-								</a></li>
-									
-								<li><a href="#" class="graph">
-									<img src="assets/icons/graph.png" />									
-									<br />Graph
-								</a></li>
+<div class="main span3">
+	<div class="controls">
 
-								<li><a href="#" class="star">
-									<img data-role="<%= stat.id %>" src="<%= star %>" />				
-									<br />Star
-								</a></li>
-									
-								<li><a href="#" class="options">
-									<img src="assets/icons/settings.png" />
-									<br />Options
-								</a></li>
-									
-								<li><a href="#">
-									<img src="assets/icons/export.png" />
-									<br />Export
-								</a></li>
-								
-								<li><a href="#" class="delete">
-									<img src="assets/icons/delete.png" />
-									<br />Delete
-								</a></li>
-							</ul>
-						</div><!-- .span3 -->
+	</div><!-- .controls -->
+	<div class="values">
+		
+	</div><!-- .values -->
+</div><!-- .span3 -->
+<div class="side span1">
+	<ul class="nav nav-list">
+		<li><a class="detail" href="#stat/<%= stat.id %>">
+			<img src="assets/icons/data.png" />
+			<br />Data
+		</a></li>
+			
+		<li><a href="#">
+			<img src="assets/icons/graph.png" />									
+			<br />Graph
+		</a></li>
+
+		<li><a href="#" class="star">
+			<img data-role="<%= stat.id %>" src="<%= star %>" />				
+			<br />Star
+		</a></li>
+			
+		<li><a href="#" class="options">
+			<img src="assets/icons/settings.png" />
+			<br />Options
+		</a></li>
+			
+		<li><a href="#">
+			<img src="assets/icons/export.png" />
+			<br />Export
+		</a></li>
+		
+		<li><a href="#" class="delete">
+			<img src="assets/icons/delete.png" />
+			<br />Delete
+		</a></li>
+	</ul>
+</div><!-- .span3 -->
 

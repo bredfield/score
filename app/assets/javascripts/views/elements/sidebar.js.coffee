@@ -5,7 +5,7 @@ class app.views.sidebar extends Support.CompositeView
 		@$ = $(@el)
 
 	render:->
-		@$.html JST['templates/branding']
+		@$.html JST['templates/elements/branding']
 		@user()
 		@categories()
 		

@@ -5,6 +5,6 @@ class app.views.header extends Support.CompositeView
 		@$ = $(@el)
 
 	render:->
-		@$.html JST['templates/header']
+		@$.html JST['templates/elements/header']
 		return @
 

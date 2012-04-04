@@ -41,9 +41,19 @@ class app.views.statsIndex extends Support.CompositeView
 	stats:->
 		## Filter through stats, create items
 		@categories.each (stat,i)=>
+			
+			
+			if @category is 'all' 
+				catID = stat.escape 'category_id'
+				cat = app.categories.get catID
+			else
+				cat = false
 
 			stat = new app.views.statItem
 				model:stat
+				category:cat
+			
+
 			@renderChild(stat)
 			@$.append stat.el
 
@@ -69,7 +79,7 @@ class app.views.statsIndex extends Support.CompositeView
 			@collection.add(newStat)
 
 	prevent:(e)->
-		e.preventDefault()
+		e.preventDefault() unless $(e.target).closest('a').hasClass('detail')
 
 
 
