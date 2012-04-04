@@ -107,6 +107,7 @@ h1,h2,h3{
 	width:60px;
 	height:60px;
 	margin:5px;
+
 	float:left;
 }
 
@@ -127,7 +128,7 @@ h1,h2,h3{
 .user .icons{
 	list-style:none;
 	margin-left:0;
-	padding-left:0px;
+	padding-left:5px;
 	
 }
 
@@ -261,6 +262,14 @@ h1,h2,h3{
 	font-size:18px;
 	color:#bbb;
 	font-weight:200;
+}
+
+.stats-header li.new a{
+	font-size:50px;
+	line-height:35px;
+	font-weight:300;
+	color:#6AA5FB;
+	text-decoration:none;
 }
 #stats .spacer{
 	height:50px;
